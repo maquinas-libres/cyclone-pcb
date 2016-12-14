@@ -370,9 +370,9 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 #define max_software_endstops true  // If true, axis won't move to coordinates greater than the defined lengths below.
 
 // Travel limits after homing
-#define X_MAX_POS 168
+#define X_MAX_POS 150
 #define X_MIN_POS 0
-#define Y_MAX_POS 101
+#define Y_MAX_POS 99 
 #define Y_MIN_POS 0
 #define Z_MAX_POS 50
 #define Z_MIN_POS 0
@@ -382,7 +382,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
 #define Z_MAX_LENGTH (Z_MAX_POS - Z_MIN_POS)
 //============================= Bed Auto Leveling ===========================
 
-//#define ENABLE_AUTO_BED_LEVELING // Delete the comment to enable (remove // at the start of the line)
+#define ENABLE_AUTO_BED_LEVELING // Delete the comment to enable (remove // at the start of the line)
 #define Z_PROBE_REPEATABILITY_TEST  // If not commented out, Z-Probe Repeatability test will be included if Auto Bed Leveling is Enabled.
 
 #ifdef ENABLE_AUTO_BED_LEVELING
@@ -407,14 +407,14 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
   #ifdef AUTO_BED_LEVELING_GRID
 
     // set the rectangle in which to probe
-    #define LEFT_PROBE_BED_POSITION 0
-    #define RIGHT_PROBE_BED_POSITION X_MAX_POS
-    #define BACK_PROBE_BED_POSITION Y_MAX_POS
-    #define FRONT_PROBE_BED_POSITION 0
+    #define LEFT_PROBE_BED_POSITION 5
+    #define RIGHT_PROBE_BED_POSITION 140
+    #define BACK_PROBE_BED_POSITION 90
+    #define FRONT_PROBE_BED_POSITION 5
 
      // set the number of grid points per dimension
      // I wouldn't see a reason to go above 3 (=9 probing points on the bed)
-    #define AUTO_BED_LEVELING_GRID_POINTS 2
+    #define AUTO_BED_LEVELING_GRID_POINTS 5 
 
 
   #else  // not AUTO_BED_LEVELING_GRID
